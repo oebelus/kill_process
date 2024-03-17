@@ -21,7 +21,22 @@ for process in processes:
 active_processes = []
 
 def get_used_processes() -> list:
-    active_processes = []
+    active_processes = [
+        "System Idle Process",
+        "System",
+        "smss.exe",
+        "csrss.exe",
+        "wininit.exe",
+        "services.exe",
+        "lsass.exe",
+        "winlogon.exe",
+        "spoolsv.exe",
+        "explorer.exe",
+        "svchost.exe",
+        "dwm.exe",
+        "ctfmon.exe",
+        "taskhostw.exe"
+    ]
     for i in processes_dictionary.keys():
         process_without_exe = i[:len(i)-4].lower()
         if gw.getWindowsWithTitle(process_without_exe):
