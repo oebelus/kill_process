@@ -2,7 +2,7 @@
 
 I used the psutil library to kill processes on my Windows system as I am tired of killing them manually one by one. It categorizes processes into two groups: used processes (vital Windows processes + Processes in Taskbar) and other background processes. 
 
-Usage
+### Usage
 
 1. Ensure that Python and the required libraries (psutil, pygetwindow) are installed on your system.
 2. If there are background processes you don't wanna kill, add them to the `active_processes` in the `get_used_processes()` function
