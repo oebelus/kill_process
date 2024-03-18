@@ -16,7 +16,6 @@ for process in processes:
     else:
         processes_dictionary[name] += rss_mb
 
-#print(json.dumps(processes_dictionary, indent=2))
 active_processes = []
 
 def get_used_processes() -> list:
@@ -34,7 +33,8 @@ def get_used_processes() -> list:
         "svchost.exe",
         "dwm.exe",
         "ctfmon.exe",
-        "taskhostw.exe"
+        "taskhostw.exe",
+        "igfxEMN.exe" 
     ]
     for i in processes_dictionary.keys():
         process_without_exe = i[:len(i)-4].lower()
